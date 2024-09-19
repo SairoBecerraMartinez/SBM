@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+.hidden {
+    position: absolute;
+    top: -3%;
+}
+
+#productos{
+    /*background-color: red;/* eliminar al terminar*/
+
+    display: flex; /* Organiza los divs en una fila horizontal */
+    flex-wrap: wrap; /* Permite que los divs se ajusten a una nueva línea si es necesario */
+    gap: 30px; /* Espacio entre los divs */
+    position: relative; /* Necesario para el z-index */
+    left: 3%;
+}
+.producto {
+    border: 1px solid #ddd;
+    border-radius: 5px;    
+    margin: 50px 0;
+    padding: 5px;
+    text-align: center;
+    width: 22%; /* Ancho de aproximadamente 6.32 cm */
+    height: 12%; /* Altura de aproximadamente 6.32 cm */
+    border: 1px solid #333; /* Borde opcional para visualizar mejor el div */
+    flex-direction: column; /* Coloca imagen y descripción en columna */
+    transition: all 0.3s ease; /* Transición suave para el efecto de expansión */
+}
+
+/* Efecto de expansión al pasar el cursor */
+.producto:hover {
+    transform: scale(1.1); /* Escalar la imagen al 110% */
+}
+
+/*
+*/
+
+.gallery {
+    position: relative;
+    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: auto;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 400px; /* Ajusta la altura deseada */
+    object-fit: contain; /* Ajusta la imagen sin recortarla */
+    display: none;
+    background-color: #fff; /* Fondo blanco para el área vacía */
+}
+
+.gallery-image.active {
+    display: block;
+}
+
+
+
+button gallery{
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.precio {
+    font-weight: bold;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#carrito {
+    border-top: 2px solid #4CAF50;
+    padding-top: 20px;
+}
+
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-carrito li {
+    margin: 5px 0;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/* Agregar una transición suave a los botones */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Efecto de expansión al hacer clic */
+button:active {
+    transform: scale(1.1);
+}
+/* Efecto de expansión con clase adicional */
+button.expandido {
+    transform: scale(1.1);
+}
+
+#Eliminar {
+    background-color: #dc3545; /* Color de fondo del botón (rojo) */
+    color: white;
+    border: none;
+    padding: 3px 6px; /* Tamaño del botón (más pequeño) */
+    font-size: 12px; /* Tamaño del texto del botón */
+    cursor: pointer;
+    border-radius: 3px; /* Bordes redondeados del botón */
+}
+
+#Eliminar:hover {
+    background-color: #c82333; /* Color de fondo del botón cuando se pasa el ratón por encima */
+}
+
+.#Eliminar:focus {
+    outline: none; /* Quitar el contorno del botón cuando está enfocado */
+}
