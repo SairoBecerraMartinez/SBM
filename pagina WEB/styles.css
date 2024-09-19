@@ -36,7 +36,7 @@ main {
 }
 
 #productos{
-    background-color: red;/* eliminar al terminar*/
+    /*background-color: red;/* eliminar al terminar*/
 
     display: flex; /* Organiza los divs en una fila horizontal */
     flex-wrap: wrap; /* Permite que los divs se ajusten a una nueva línea si es necesario */
