@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Mi Tienda</h1>
+        <nav>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#carrito">Carrito</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="productos">
+            <h2 class="hidden">Productos</h2>
+            <div class="producto" >           
+                    <div class="gallery" id="gallery1" data-img="Imagenes/producto 1/Guayo1.webp">                    
+                        <img src="Imagenes/producto 1/Guayo1.webp" class="gallery-image" alt="Imagen 1">
+                        <img src="Imagenes/producto 1/Guayo11.webp" class="gallery-image" alt="Imagen 2">
+                        <img src="Imagenes/producto 1/Guayo12.webp" class="gallery-image" alt="Imagen 3">
+                        <img src="Imagenes/producto 1/Guayo13.webp" class="gallery-image" alt="Imagen 4">
+                        <!-- Agrega más imágenes aquí si lo deseas -->
+                        <button class="prev" onclick="prevImage(1)">&#10094;</button>
+                        <button class="next" onclick="nextImage(1)">&#10095;</button>
+                    </div>
+                
+                <h3>Nombre del Producto 1</h3>
+                <p>Descripción breve del producto 1.</p>
+                <p class="precio">$20.00</p>
+                <form id="form-producto1">
+                    <label for="tallas">Selecciona una talla:</label>
+                    <select id="tallas" name="tallas">
+                        <option value=""> </option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                    </select>
+                </form>
+
+                <button id="send-whatsapp" onclick="agregarAlCarrito('Nombre del Producto 1', 20.00,'form-producto1','gallery1')" >Añadir al carrito</button>
+            </div>
+            <div class="producto" >                
+                <div class="gallery" id="gallery2">
+                    <img src="Imagenes/producto 2/Guayo2.webp" class="gallery-image" alt="Imagen 1">
+                    <img src="Imagenes/producto 2/Guayo21.webp" class="gallery-image" alt="Imagen 2">
+                    <img src="Imagenes/producto 2/Guayo22.webp" class="gallery-image" alt="Imagen 3">
+                    <img src="Imagenes/producto 2/Guayo23.webp" class="gallery-image" alt="Imagen 4">
+                    <!-- Agrega más imágenes aquí si lo deseas -->
+                    <button class="prev" onclick="prevImage(2)">&#10094;</button>
+                    <button class="next" onclick="nextImage(2)">&#10095;</button>
+                </div>                
+
+                <h3>Nombre del Producto 2</h3>
+                <p>Descripción breve del producto 2.</p>
+                <p class="precio">$30.00</p>
+                <form id="form-producto2">
+                    <label for="tallas">Selecciona una talla:</label>
+                    <select id="tallas" name="tallas">
+                        <option value=""> </option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                    </select>
+                </form>
+
+                <button onclick="agregarAlCarrito('Nombre del Producto 2', 30.00,'form-producto2','gallery2')">Añadir al carrito</button>
+            </div>
+            <div class="producto" >                
+                <div class="gallery" id="gallery3">
+                    <img src="Imagenes/producto 3/Guayo3.webp" class="gallery-image" alt="Imagen 1">
+                    <img src="Imagenes/producto 3/Guayo31.webp" class="gallery-image" alt="Imagen 2">
+                    <img src="Imagenes/producto 3/Guayo32.webp" class="gallery-image" alt="Imagen 3">
+                    <img src="Imagenes/producto 3/Guayo33.webp" class="gallery-image" alt="Imagen 4">
+                    <!-- Agrega más imágenes aquí si lo deseas -->
+                    <button class="prev" onclick="prevImage(3)">&#10094;</button>
+                    <button class="next" onclick="nextImage(3)">&#10095;</button>
+                </div>
+
+                <h3>Nombre del Producto 3</h3>
+                <p>Descripción breve del producto 3.</p>
+                <p class="precio">$40.00</p>
+                <form id="form-producto3">
+                    <label for="tallas">Selecciona una talla:</label>
+                    <select id="tallas" name="tallas">
+                        <option value=""> </option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                    </select>
+                </form>
+
+
+                <button onclick="agregarAlCarrito('Nombre del Producto 3', 40.00,'form-producto3','gallery3')">Añadir al carrito</button>
+            </div>
+
+             <div class="producto" >                
+                <div class="gallery" id="gallery4">
+                    <img src="Imagenes/producto 4/Guayo4.webp" class="gallery-image" alt="Imagen 1">
+                    <img src="Imagenes/producto 4/Guayo41.webp" class="gallery-image" alt="Imagen 2">
+                    <img src="Imagenes/producto 4/Guayo41.webp" class="gallery-image" alt="Imagen 3">
+                    <img src="Imagenes/producto 4/Guayo41.webp" class="gallery-image" alt="Imagen 4">
+                    <!-- Agrega más imágenes aquí si lo deseas -->
+                    <button class="prev" onclick="prevImage(4)">&#10094;</button>
+                    <button class="next" onclick="nextImage(4)">&#10095;</button>
+                </div>
+
+                <h3>Nombre del Producto 4</h3>
+                <p>Descripción breve del producto 4.</p>
+                <p class="precio">$30.00</p>
+                <form id="form-producto4">
+                    <label for="tallas">Selecciona una talla:</label>
+                    <select id="tallas" name="tallas">
+                        <option value=""> </option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                    </select>
+                </form>
+
+                <button onclick="agregarAlCarrito('Nombre del Producto 4', 30.00,'form-producto4','gallery4')">Añadir al carrito</button>
+            </div>
+
+            <!-- Agrega más productos aquí -->
+        </section>
+
+        <section id="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="lista-carrito">
+                <!-- Los productos se agregarán aquí dinámicamente -->
+            </ul>
+            <p id="total">Total: $0.00</p>
+        </section>
+
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form id="form-contacto">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Tienda Online</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
